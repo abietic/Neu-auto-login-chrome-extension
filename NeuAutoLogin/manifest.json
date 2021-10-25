@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "name": "neu身份认证自动登录助手",
+    "description": "neu身份认证自动登录助手",
+    "browser_action": {
+  
+    },
+    "permissions": [
+      "https://pass.neu.edu.cn/*"
+    ],
+    "background": {
+  
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://pass.neu.edu.cn/*"],
+        "js": ["neu_auto_login.js"],
+        "run_at": "document_end",
+        "all_frames": true
+      }
+    ]
+  }
